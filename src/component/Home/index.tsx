@@ -11,6 +11,7 @@ export const Home = (props) => {
   }, [props.lang]);
   return (
     <div className="home">
+      <p className="madeText">{props.language.madeText}</p>
       <div className="home_back">
         <div className="resumeBox">
           <div className="careerBox">
