@@ -17,21 +17,25 @@ export const MobileHeader = props => {
 const Menu = props => {
     return (
         <div className="mobileHeaderMenu" style = {{ right: props.isOpen ? 0 : '-100vw'}}>
-            <div className="innerMenu">    
+            <div className="innerMenu">
+                <li className="langBox">
+                    <div className="globalImg"/>
+                    <div className="nowLang">{ props.lang }</div>
+                </li>
                 <li className="innerLink">
-                    <NavLink exact to = '/'>Home</NavLink>
+                    <NavLink exact to = '/' activeClassName = "activeMenu">Home</NavLink>
                 </li>    
                 <li className="innerLink">
-                    <NavLink exact to = '/'>Resume</NavLink>
+                    <NavLink exact to = '/resume' activeClassName = "activeMenu">Resume</NavLink>
                 </li>    
                 <li className="innerLink">
-                    <NavLink exact to = '/'>Github</NavLink>
+                    Github
                 </li>    
                 <li className="innerLink">
-                    <NavLink exact to = '/'>Blog</NavLink>
+                    Blog
                 </li>    
                 <li className="innerLink">
-                    <NavLink exact to = '/'>Portfolio</NavLink>
+                    <NavLink exact to = '/portfolio' activeClassName = "activeMenu">Portfolio</NavLink>
                 </li>
             </div>
         </div>
