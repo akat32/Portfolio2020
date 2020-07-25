@@ -17,7 +17,9 @@ const Menu = props => {
     return (
         <div className="mobileHeaderMenu" style = {{ right: props.isOpen ? 0 : '-100vw'}}>
             <div className="innerMenu">
-                <li className="langBox">
+                <li className="langBox" onClick = { () => {
+                    props.setLang(lang => lang === "KR" ? "EN" : "KR")
+                }}>
                     <div className="globalImg"/>
                     <div className="nowLang">{ props.lang }</div>
                 </li>
