@@ -7,7 +7,7 @@ export const ResumeData = {
     {
       company: "얼리슬로스 (earlysloth)",
       startAt: "2019년 11월", // 입사 월
-      endAt: "",
+      endAt: "2020년 7월",
       job: "프론트엔드 개발자", // 배정받은 일
       description:
         "React, Vue를 이용한 서비스 리펙토링, 리빌딩을 맡고 있습니다.",
