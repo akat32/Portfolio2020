@@ -7,6 +7,7 @@
     left: 0;
     display: flex;
     align-items: center;
+    z-index: 99;
     .userName {
         text-align: center;
         color: #fff;
@@ -14,4 +15,41 @@
         padding-left: 15px;
         // Noto Sans CJK KR Regular
     }
+    .openBtn {
+        width: 28px;
+        height: 28px;
+        margin-right: 15px;
+        background-color: #fff;
+        z-index: 999;
+        // background Image
+    }
+    .headerBack {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 100;
+        transform: .2s;
+    }
+    .mobileHeaderMenu {
+        z-index: 101;
+        width: 60%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        transition: right .5s ease-in-out;
+        .innerMenu {
+            width: 100%;
+            background-color: #161616;
+            height: 100%;
+            .innerLink { 
+                // NotoSansCJKkr-Bold
+            }
+        }
+    }
+}
+.dump {
+    flex: 1;
 }

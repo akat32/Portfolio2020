@@ -18,7 +18,7 @@ const App: React.FC = () => {
         {
           isMobile ?
           <>
-            <MobileHeader lang ={ lang } setLange = { setLang}/>
+            <MobileHeader lang ={ lang } setLang = { setLang}/>
           </> : 
           <>
             <HeaderNavigation lang={lang} setLang={setLang} />
