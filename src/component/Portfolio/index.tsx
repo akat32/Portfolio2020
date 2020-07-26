@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./style.scss";
+import './style.scss';
 
 // 들어가야 할 변수
 
@@ -13,19 +13,19 @@ import "./style.scss";
 // 화면
 // 기종 변경
 // description
-import { ProjectSelector } from "./ProjectSelector";
-import { ProjectInfo } from "./ProjectInfo/index";
-import { View } from "./ProjectView/index";
+import { ProjectSelector } from './ProjectSelector';
+import { ProjectInfo } from './ProjectInfo/index';
+import { View } from './ProjectView/index';
 
 export const Portfolio = (props) => {
-  return (
-    <div className="project">
-      <div style={{ height: "4em" }} />
-      <div className="contant">
-        <ProjectSelector language={props.language.selector} lang={props.lang} />
-        <View lang={props.lang} />
-        <ProjectInfo language={props.language.info} lang={props.lang} />
-      </div>
-    </div>
-  );
+	return (
+		<div className="project">
+			<div style={{ height: '4em' }} />
+			<div className="contant">
+				<ProjectSelector language={props.language.selector} lang={props.lang} />
+				<View lang={props.lang} />
+				<ProjectInfo language={props.language.info} lang={props.lang} />
+			</div>
+		</div>
+	);
 };

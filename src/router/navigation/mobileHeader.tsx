@@ -44,7 +44,7 @@ const Menu = (props) => {
 				<li className="innerLink">
 					<NavLink
 						exact
-						to="/resume"
+						to="/Resume"
 						activeClassName="activeMenu"
 						onClick={() => {
 							props.setIsOpen();
@@ -78,7 +78,7 @@ const Menu = (props) => {
 				<li className="innerLink">
 					<NavLink
 						exact
-						to="/portfolio"
+						to="/Portfolio"
 						activeClassName="activeMenu"
 						onClick={() => {
 							props.setIsOpen();
