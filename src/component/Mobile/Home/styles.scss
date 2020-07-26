@@ -5,10 +5,92 @@
 	background-size: cover;
 	background-position-x: 50%;
 	position: relative;
+	.madeText {
+		position: absolute;
+		text-align: right;
+		width: 80%;
+		bottom: 1rem;
+		color: #fff;
+		opacity: 0.7;
+		right: 1rem;
+	}
 	.backBlur {
 		position: absolute;
 		width: 100%;
+		z-index: 3;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.35);
+	}
+	.resumeBox {
+		z-index: 5;
+		position: absolute;
+		width: 85%;
+		height: 80%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		overflow-y: scroll;
+		top: 12%;
+		.careerBox,
+		.educationBox,
+		.awardsBox,
+		.certificateBox {
+			// TODO Font 적용 재확인 필요
+			.boxTitle {
+				font-family: 'Noto Sans CJK KR Bold';
+				color: #fff;
+				font-size: 24px;
+				margin-bottom: 16px;
+			}
+			.resumeItem {
+				width: calc(100% - 30px);
+				background-color: #fff;
+				margin-bottom: 40px;
+				border-radius: 5px;
+				padding: 15px;
+				// TODO Shadow 적용
+				.dump {
+					flex: 1;
+				}
+				.inner_info_box {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					.info_info {
+						width: 100%;
+						display: flex;
+					}
+					.info_DesBox {
+						display: flex;
+						flex-direction: column;
+						margin-left: 8px;
+						justify-content: center;
+						.info_title {
+							margin-top: 6px;
+							font-family: 'Noto Sans CJK KR Medium';
+							color: #28282c;
+							font-size: 14px;
+						}
+						.info_sub {
+							margin-bottom: 6px;
+							font-family: 'Noto Sans CJK KR Regular';
+							color: #898995;
+							font-size: 12px;
+						}
+					}
+					.info_date {
+						display: flex;
+						color: #6c69ff;
+						align-items: center;
+						font-size: 12px;
+					}
+				}
+				img {
+					border-radius: 50%;
+					height: 52px;
+					width: 52px;
+				}
+			}
+		}
 	}
 }
