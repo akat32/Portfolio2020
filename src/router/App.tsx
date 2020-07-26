@@ -4,7 +4,7 @@ import './App.scss';
 import { HeaderNavigation } from './navigation/header';
 import { MobileHeader } from './navigation/mobileHeader';
 import { Home, Portfolio, Resume } from '../component';
-import { MobileHome, MobileResume } from '../component/Mobile';
+import { MobileHome, MobileResume, MobilePortfolio } from '../component/Mobile';
 import { DeviceProvider } from '../context/DeviceContext';
 import { ProjectProvider } from '../context/ProjectContext';
 import { isMobile } from 'react-device-detect';
@@ -25,6 +25,9 @@ const App: React.FC = () => {
 								</Route>
 								<Route exact path="/Resume">
 									<MobileResume lang={lang} />
+								</Route>
+								<Route exact path="/Portfolio">
+									<MobilePortfolio language={lang === 'EN' ? EN.Portfolio : KR.Portfolio} lang={lang} />
 								</Route>
 							</Switch>
 						</>

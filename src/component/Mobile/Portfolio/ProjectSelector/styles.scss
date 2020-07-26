@@ -1,0 +1,41 @@
+.MobileProjectSelector {
+	.backBlur {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.selectorMenu {
+		.dump {
+			flex: 1;
+		}
+		width: 100%;
+		height: 60%;
+		border-radius: 6.5% 6.5% 0 0;
+		position: fixed;
+		bottom: 0;
+		transition: bottom 0.5s ease-in-out;
+		background-color: #fff;
+		.titleLine {
+			padding-left: 6.5%;
+			padding-right: 6.5%;
+			padding-top: 5.5%;
+			width: 87%;
+			height: 6.5%;
+			display: flex;
+			align-items: center;
+			.title {
+				font-family: 'Noto Sans CJK KR Bold';
+				font-size: 18px;
+				color: #222222;
+			}
+			.close {
+				font-family: 'Noto Sans CJK KR Regular';
+				font-size: 14px;
+				color: #a5a5a5;
+			}
+		}
+	}
+}
