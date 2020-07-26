@@ -50,6 +50,12 @@
 					margin: 0 !important;
 				}
 			}
+			.awardsInfo {
+				display: block !important;
+				.info_title {
+					margin-bottom: 4px;
+				}
+			}
 			.resumeItem {
 				width: calc(100% - 30px);
 				background-color: #fff;
@@ -73,18 +79,18 @@
 						flex-direction: column;
 						margin-left: 8px;
 						justify-content: center;
-						.info_title {
-							margin-top: 4px;
-							font-family: 'Noto Sans CJK KR Medium';
-							color: #28282c;
-							font-size: 13px;
-						}
-						.info_sub {
-							margin-bottom: 4px;
-							font-family: 'Noto Sans CJK KR Regular';
-							color: #898995;
-							font-size: 11px;
-						}
+					}
+					.info_title {
+						margin-top: 4px;
+						font-family: 'Noto Sans CJK KR Medium';
+						color: #28282c;
+						font-size: 13px;
+					}
+					.info_sub {
+						margin-bottom: 4px;
+						font-family: 'Noto Sans CJK KR Regular';
+						color: #898995;
+						font-size: 11px;
 					}
 				}
 				.info_date {
