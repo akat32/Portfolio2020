@@ -3,8 +3,11 @@ import './mobile.scss';
 import { NavLink } from 'react-router-dom';
 export const MobileHeader = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
+	function backcolor() {
+		return window.location.pathname === '/' ? 'backNone' : 'backBlack';
+	}
 	return (
-		<div className="mobileHeader">
+		<div className={`mobileHeader ${backcolor()}`}>
 			<p className="userName">Park Tae Wook</p>
 			<div className="dump" />
 			<div className="openBtn" onClick={() => setIsOpen((isOpen) => !isOpen)} />
@@ -27,27 +30,60 @@ const Menu = (props) => {
 					<div className="nowLang">{props.lang}</div>
 				</li>
 				<li className="innerLink">
-					<NavLink exact to="/" activeClassName="activeMenu" onClick={() => props.setIsOpen()}>
+					<NavLink
+						exact
+						to="/"
+						activeClassName="activeMenu"
+						onClick={() => {
+							props.setIsOpen();
+						}}
+					>
 						Home
 					</NavLink>
 				</li>
 				<li className="innerLink">
-					<NavLink exact to="/resume" activeClassName="activeMenu" onClick={() => props.setIsOpen()}>
+					<NavLink
+						exact
+						to="/resume"
+						activeClassName="activeMenu"
+						onClick={() => {
+							props.setIsOpen();
+						}}
+					>
 						Resume
 					</NavLink>
 				</li>
 				<li className="innerLink">
-					<a href="https://github.com/akat32" target="_blank" onClick={() => props.setIsOpen()}>
+					<a
+						href="https://github.com/akat32"
+						target="_blank"
+						onClick={() => {
+							props.setIsOpen();
+						}}
+					>
 						Github
 					</a>
 				</li>
 				<li className="innerLink">
-					<a href="https://blog.naver.com/akat32" target="_blank" onClick={() => props.setIsOpen()}>
+					<a
+						href="https://blog.naver.com/akat32"
+						target="_blank"
+						onClick={() => {
+							props.setIsOpen();
+						}}
+					>
 						Blog
 					</a>
 				</li>
 				<li className="innerLink">
-					<NavLink exact to="/portfolio" activeClassName="activeMenu" onClick={() => props.setIsOpen()}>
+					<NavLink
+						exact
+						to="/portfolio"
+						activeClassName="activeMenu"
+						onClick={() => {
+							props.setIsOpen();
+						}}
+					>
 						Portfolio
 					</NavLink>
 				</li>
