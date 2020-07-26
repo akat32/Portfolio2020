@@ -42,6 +42,14 @@
 				font-size: 24px;
 				margin-bottom: 16px;
 			}
+			.educationItem {
+				.info_date {
+					display: flex;
+					align-items: center;
+					font-size: 11px;
+					margin: 0 !important;
+				}
+			}
 			.resumeItem {
 				width: calc(100% - 30px);
 				background-color: #fff;
@@ -66,29 +74,42 @@
 						margin-left: 8px;
 						justify-content: center;
 						.info_title {
-							margin-top: 6px;
+							margin-top: 4px;
 							font-family: 'Noto Sans CJK KR Medium';
 							color: #28282c;
-							font-size: 14px;
+							font-size: 13px;
 						}
 						.info_sub {
-							margin-bottom: 6px;
+							margin-bottom: 4px;
 							font-family: 'Noto Sans CJK KR Regular';
 							color: #898995;
-							font-size: 12px;
+							font-size: 11px;
 						}
 					}
-					.info_date {
-						display: flex;
-						color: #6c69ff;
-						align-items: center;
-						font-size: 12px;
-					}
+				}
+				.info_date {
+					color: #a5a5a5;
+					font-family: 'Noto Sans CJK KR Regular';
+					font-size: 10px;
+					margin-left: 8px;
+					text-align: right;
+					margin-top: -18px;
+					margin-bottom: 16px;
+				}
+				.info_des {
+					font-family: 'Noto Sans CJK KR Regular';
+					color: #62626c;
+					border-radius: 3px;
+					display: block;
+					background-color: #f4f4f4;
+					width: calc(100% - 16px);
+					padding: 8px;
+					font-size: 12px;
 				}
 				img {
 					border-radius: 50%;
-					height: 52px;
-					width: 52px;
+					height: 44px;
+					width: 44px;
 				}
 			}
 		}

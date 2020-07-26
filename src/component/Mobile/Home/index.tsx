@@ -25,7 +25,7 @@ export const MobileHome = (props: any) => {
 												<p className="info_sub">{item.department}</p>
 											</div>
 											<div className="dump" />
-											<p className="info_date">
+											<p className="info_date" style={{ color: i === 0 ? '#6c69ff' : '#a5a5a5' }}>
 												<span>{item.startAt}</span> ~ <span>{item.endAt !== '' ? item.endAt : '현재'}</span>
 											</p>
 										</div>
@@ -44,13 +44,17 @@ export const MobileHome = (props: any) => {
 									<div className="inner_info_box">
 										<img alt="커리어 아이콘" src={item.icon} className="carrerIcon" />
 										<div className="carrerInfo info_info">
-											<p className="info_title">{item.company}</p>
-											<p className="info_sub">{item.job}</p>
-											<p className="info_date">
-												<span>{item.startAt}</span> ~ <span>{item.endAt !== '' ? item.endAt : '현재'}</span>
-											</p>
+											<div className="info_DesBox">
+												<p className="info_title">{item.company}</p>
+												<div className="dump" />
+												<p className="info_sub">{item.job}</p>
+											</div>
+											<div className="dump" />
 										</div>
 									</div>
+									<p className="info_date" style={{ color: i === 0 ? '#6c69ff' : '#a5a5a5' }}>
+										<span>{item.startAt}</span> ~ <span>{item.endAt !== '' ? item.endAt : '현재'}</span>
+									</p>
 									<p className="info_des">{item.description}</p>
 								</div>
 							</div>
