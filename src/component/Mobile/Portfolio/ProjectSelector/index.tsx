@@ -5,6 +5,8 @@ import { useDeviceState, useDeviceDispatch } from '../../../../context/DeviceCon
 import { useProjectState, useProjectDispatch } from '../../../../context/ProjectContext';
 import './styles.scss';
 export const ProjectSelector = (props) => {
+	console.log(props);
+
 	let state = useProjectState();
 	let number = state.number;
 	const [info, setInfo] = useState(props.lang === 'EN' ? ProjectDataEN[number] : ProjectData[number]);
@@ -16,15 +18,15 @@ export const ProjectSelector = (props) => {
 			{props.selectorOpen ? <div className="backBlur" onClick={() => props.setSelectorOpen()} /> : null}
 			<div className="selectorMenu" style={{ bottom: props.selectorOpen ? 0 : '-100vh' }}>
 				<div className="titleLine">
-					<p className="title">기종 선택</p>
+					<p className="title">{props.language.DeviceSelect}</p>
 					<div className="dump" />"
 					<p className="close" onClick={() => props.setSelectorOpen()}>
-						닫기
+						{props.language.close}
 					</p>
 				</div>
 				<DeviceSelector info={info} />
 				<div className="titleLine">
-					<p className="title">프로젝트 선택</p>
+					<p className="title">{props.language.ProjectSelect}</p>
 				</div>
 				<Selector info={info} />
 			</div>
@@ -36,7 +38,6 @@ const DeviceSelector = (info: any) => {
 	const state: any = useDeviceState();
 	const dispatch: any = useDeviceDispatch();
 	const projectDevice: any = useProjectDispatch();
-	console.log(state.device);
 	return (
 		<div className="MobileDeviceSelector">
 			{info.info.iphone.length !== 0 ? (

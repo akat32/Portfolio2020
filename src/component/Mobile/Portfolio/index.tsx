@@ -16,12 +16,12 @@ export const MobilePortfolio = (props) => {
 					setSelectorOpen((selectorOpen) => !selectorOpen);
 				}}
 			>
-				프로젝트 설정
+				{props.language.mobileSelector.projectSetting}
 			</div>
 			<ProjectSelector
 				setSelectorOpen={() => setSelectorOpen(false)}
 				selectorOpen={selectorOpen}
-				language={props.language.selector}
+				language={props.language.mobileSelector}
 				lang={props.lang}
 			/>
 			<div className="contant">
