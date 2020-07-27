@@ -26,6 +26,7 @@ export const ProjectSelector = (props) => {
 				<div className="titleLine">
 					<p className="title">프로젝트 선택</p>
 				</div>
+				<Selector info={info} />
 			</div>
 		</div>
 	);
@@ -38,7 +39,6 @@ const DeviceSelector = (info: any) => {
 		<div className="MobileDeviceSelector">
 			{info.info.iphone.length !== 0 ? (
 				<>
-					<div style={{ flex: 1 }} />
 					<div
 						className="Iphone"
 						onClick={() => {
@@ -48,12 +48,10 @@ const DeviceSelector = (info: any) => {
 					>
 						<div className="img" />
 					</div>
-					<div style={{ flex: 1 }} />
 				</>
 			) : null}
 			{info.info.tablet.length !== 0 ? (
 				<>
-					<div style={{ flex: 1 }} />
 					<div
 						className="Tablet"
 						onClick={() => {
@@ -63,13 +61,10 @@ const DeviceSelector = (info: any) => {
 					>
 						<div className="img" />
 					</div>
-					<div style={{ flex: 1 }} />
 				</>
 			) : null}
 			{info.info.computer.length !== 0 ? (
 				<>
-					<div style={{ flex: 1 }} />
-
 					<div
 						className="Computer"
 						onClick={() => {
@@ -79,9 +74,37 @@ const DeviceSelector = (info: any) => {
 					>
 						<div className="img" />
 					</div>
-					<div style={{ flex: 1 }} />
 				</>
 			) : null}
 		</div>
+	);
+};
+
+const Selector = (info: any) => {
+	return (
+		<div className="mobileProjectList">
+			<div className="innerList">
+				{ProjectData.map((item, i) => (
+					<Item key={`option_${i}`} num={i} />
+				))}
+			</div>
+		</div>
+	);
+};
+
+const Item = (props: any) => {
+	const dispatch: any = useProjectDispatch();
+	let deviceDispatch: any = useDeviceDispatch();
+	return (
+		<img
+			className={`mobileItem mobileProjectIcon`}
+			src={ProjectData[props.num].icon}
+			onClick={() => {
+				dispatch({ type: 'CHANGE_NUMBER', number: props.num });
+				if (ProjectData[props.num].iphone.length !== 0) deviceDispatch({ type: 'CHANGE_IPHONE' });
+				else if (ProjectData[props.num].tablet.length !== 0) deviceDispatch({ type: 'CHANGE_TABLET' });
+				else if (ProjectData[props.num].computer.length !== 0) deviceDispatch({ type: 'CHANGE_COMPUTER' });
+			}}
+		/>
 	);
 };

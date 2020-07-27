@@ -8,6 +8,7 @@
 		background-color: rgba(0, 0, 0, 0.5);
 	}
 	.selectorMenu {
+		overflow-y: scroll;
 		.dump {
 			flex: 1;
 		}
@@ -36,6 +37,74 @@
 				font-size: 14px;
 				color: #a5a5a5;
 			}
+		}
+	}
+}
+.MobileDeviceSelector {
+	padding-left: 6.5%;
+	padding-right: 6.5%;
+	margin-top: 16px;
+	.Iphone {
+		width: 64px;
+		height: 64px;
+		border-radius: 5px;
+		position: relative;
+		.img {
+			position: absolute;
+			background-image: url('../../../../assets/drawable/phone_icon.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 40%;
+			height: 70%;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+		}
+	}
+	.Tablet {
+		width: 64px;
+		height: 64px;
+		border-radius: 5px;
+		background-color: #000;
+		.img {
+			background-image: url('../../../../assets/drawable/table_icon.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+	.Computer {
+		width: 64px;
+		height: 64px;
+		border-radius: 5px;
+		background-color: #000;
+		.img {
+			background-image: url('../../../../assets/drawable/computer_icon.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.mobileProjectList {
+	padding-left: 5.5%;
+	margin-top: 16px;
+	padding-right: 5.5%;
+	width: 89%;
+	max-width: 400px;
+	.innerList {
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		.mobileItem {
+			width: 16%;
+			margin-left: 2%;
+			margin-right: 2%;
+			margin-bottom: 2%;
+			float: left;
+			background-size: contain;
+			background-repeat: no-repeat;
 		}
 	}
 }
