@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { ProjectData } from '../../../../context/ProjectData';
 import { ProjectDataEN } from '../../../../context/ProjectDataEN';
-import { useDeviceDispatch } from '../../../../context/DeviceContext';
+import { useDeviceState, useDeviceDispatch } from '../../../../context/DeviceContext';
 import { useProjectState, useProjectDispatch } from '../../../../context/ProjectContext';
 import './styles.scss';
 export const ProjectSelector = (props) => {
@@ -33,14 +33,16 @@ export const ProjectSelector = (props) => {
 };
 
 const DeviceSelector = (info: any) => {
+	const state: any = useDeviceState();
 	const dispatch: any = useDeviceDispatch();
 	const projectDevice: any = useProjectDispatch();
+	console.log(state.device);
 	return (
 		<div className="MobileDeviceSelector">
 			{info.info.iphone.length !== 0 ? (
 				<>
 					<div
-						className="Iphone"
+						className={`Iphone ${state.device === 'IPhone' ? 'selectedDevice' : ''}`}
 						onClick={() => {
 							projectDevice({ type: 'RESET_PROJECTIMG' });
 							dispatch({ type: 'CHANGE_IPHONE' });
@@ -53,7 +55,7 @@ const DeviceSelector = (info: any) => {
 			{info.info.tablet.length !== 0 ? (
 				<>
 					<div
-						className="Tablet"
+						className={`Tablet ${state.device === 'Tablet' ? 'selectedDevice' : ''}`}
 						onClick={() => {
 							projectDevice({ type: 'RESET_PROJECTIMG' });
 							dispatch({ type: 'CHANGE_TABLET' });
@@ -66,7 +68,7 @@ const DeviceSelector = (info: any) => {
 			{info.info.computer.length !== 0 ? (
 				<>
 					<div
-						className="Computer"
+						className={`Computer ${state.device === 'COMPUTER' ? 'selectedDevice' : ''}`}
 						onClick={() => {
 							projectDevice({ type: 'RESET_PROJECTIMG' });
 							dispatch({ type: 'CHANGE_COMPUTER' });
