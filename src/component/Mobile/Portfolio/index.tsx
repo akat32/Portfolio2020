@@ -6,10 +6,9 @@ import { ProjectSelector } from './ProjectSelector';
 import { View } from './ProjectView';
 import { ProjectInfo } from './ProjectInfo';
 export const MobilePortfolio = (props) => {
-	const [selectorOpen, setSelectorOpen] = useState(true);
+	const [selectorOpen, setSelectorOpen] = useState(false);
 	return (
 		<div className="mobileProject">
-			{/* selecotr */}
 			<div
 				className="selectorOpen"
 				onClick={() => {
@@ -24,9 +23,9 @@ export const MobilePortfolio = (props) => {
 				language={props.language.mobileSelector}
 				lang={props.lang}
 			/>
-			<div className="contant">
-				<ProjectInfo language={props.language.info} lang={props.lang} />
+			<div className="mobileContant">
 				<View lang={props.lang} />
+				<ProjectInfo language={props.language.info} lang={props.lang} />
 			</div>
 		</div>
 	);

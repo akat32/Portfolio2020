@@ -5,8 +5,6 @@ import { useDeviceState, useDeviceDispatch } from '../../../../context/DeviceCon
 import { useProjectState, useProjectDispatch } from '../../../../context/ProjectContext';
 import './styles.scss';
 export const ProjectSelector = (props) => {
-	console.log(props);
-
 	let state = useProjectState();
 	let number = state.number;
 	const [info, setInfo] = useState(props.lang === 'EN' ? ProjectDataEN[number] : ProjectData[number]);
@@ -19,7 +17,7 @@ export const ProjectSelector = (props) => {
 			<div className="selectorMenu" style={{ bottom: props.selectorOpen ? 0 : '-100vh' }}>
 				<div className="titleLine">
 					<p className="title">{props.language.DeviceSelect}</p>
-					<div className="dump" />"
+					<div className="dump" />
 					<p className="close" onClick={() => props.setSelectorOpen()}>
 						{props.language.close}
 					</p>
