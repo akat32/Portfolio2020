@@ -95,12 +95,15 @@ const Selector = (info: any) => {
 };
 
 const Item = (props: any) => {
+	let state = useProjectState();
+	let number = state.number;
 	const dispatch: any = useProjectDispatch();
 	let deviceDispatch: any = useDeviceDispatch();
 	return (
 		<img
 			className={`mobileItem mobileProjectIcon`}
 			src={ProjectData[props.num].icon}
+			style={{ boxShadow: props.num === number ? '0px -1px 8px 1px rgba(31,31,31,1)' : '' }}
 			onClick={() => {
 				dispatch({ type: 'CHANGE_NUMBER', number: props.num });
 				if (ProjectData[props.num].iphone.length !== 0) deviceDispatch({ type: 'CHANGE_IPHONE' });
