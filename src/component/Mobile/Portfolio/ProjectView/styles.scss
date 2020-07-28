@@ -1,0 +1,19 @@
+.MobileDeviceView {
+	margin: auto;
+	.ProjectTitle {
+		text-align: center;
+	}
+	.viewIPhone {
+		position: relative;
+		z-index: 5 !important;
+		width: 60vw !important;
+		height: 113vw;
+		.DeviceView {
+			z-index: 70 !important;
+		}
+		.imgView {
+			height: 90%;
+			z-index: 60;
+		}
+	}
+}
