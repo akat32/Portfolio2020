@@ -68,4 +68,28 @@
 			z-index: 60;
 		}
 	}
+	.viewCOMPUTER {
+		margin-top: -4px;
+		#rightBtn {
+			top: -74px !important;
+			width: 11px !important;
+			height: 12px !important;
+		}
+		#leftBtn {
+			top: -74px !important;
+			width: 11px !important;
+			height: 12px !important;
+		}
+		position: relative;
+		z-index: 5 !important;
+		width: 88vw !important;
+		height: 68vw;
+		.DeviceView {
+			z-index: 70 !important;
+		}
+		.imgView {
+			height: 66%;
+			z-index: 60;
+		}
+	}
 }
