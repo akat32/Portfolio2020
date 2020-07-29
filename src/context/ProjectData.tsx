@@ -1,6 +1,6 @@
 import Penlight from '../assets/icon/Penlight.png';
 import Mockgongso from '../assets/icon/mockgongso.png';
-import Pocket from '../assets/icon/pocket2.png';
+import Pocket from '../assets/icon/pocket3.png';
 
 import { PocketDeskTop, PocketMobile } from '../assets/Pocketsurvey';
 import {
