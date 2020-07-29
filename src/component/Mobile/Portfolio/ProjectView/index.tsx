@@ -68,8 +68,7 @@ const DeviceView = (props) => {
 					<div className="imgView">
 						<Slider
 							ref={slider}
-							beforeChange={(index: any) => {
-								console.log(index);
+							beforeChange={(old, index: any) => {
 								setIdx(index);
 							}}
 							afterChange={(index: any) => {
