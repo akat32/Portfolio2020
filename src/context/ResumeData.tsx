@@ -9,7 +9,7 @@ export const ResumeData = {
 			startAt: '2019.11', // 입사 월
 			endAt: '2020.7',
 			job: '프론트엔드 개발자', // 배정받은 일
-			description: 'React, Vue를 이용한 서비스 리펙토링, 리빌딩을 맡고 있습니다.',
+			description: 'React, Vue를 이용한 서비스 리펙토링과 기능 개발을 맡았습니다.',
 			icon: earlysloth,
 		},
 		{
