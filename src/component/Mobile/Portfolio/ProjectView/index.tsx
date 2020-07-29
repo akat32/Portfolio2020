@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 
 import './styles.scss';
 import { ProjectData } from '../../../../context/ProjectData';
@@ -13,6 +13,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import Slider from 'infinite-react-carousel';
+import { mobileModel } from 'react-device-detect';
 export const View = (props) => {
 	return (
 		<div className="MobileProjectView">
@@ -44,20 +45,20 @@ const DeviceView = (props) => {
 				break;
 		}
 	}, [device, info]);
-	const handlers = useSwipeable({
-		trackMouse: true,
-		trackTouch: true,
-		onSwipedRight: () => {
-			let left = document.getElementById('leftBtn');
-			if (left) left.click();
-		},
-		onSwipedLeft: () => {
-			let right = document.getElementById('rightBtn');
-			if (right) right.click();
-		},
-	});
+	const slider: any = useRef(null);
 	const ImgView = (props) => {
 		const [idx, setIdx] = useState(0);
+		const handlers = useSwipeable({
+			trackMouse: true,
+			trackTouch: true,
+			preventDefaultTouchmoveEvent: true,
+			onSwipedRight: () => {
+				slider.current.slickPrev();
+			},
+			onSwipedLeft: (e) => {
+				slider.current.slickNext();
+			},
+		});
 		return (
 			<>
 				<p className="title views ProjectTitle">{info.title}</p>
@@ -66,8 +67,10 @@ const DeviceView = (props) => {
 					<div className="DeviceView" {...handlers} />
 					<div className="imgView">
 						<Slider
-							beforeChange={(old, index) => {
-								if (index !== undefined) setIdx(index);
+							ref={slider}
+							beforeChange={(index: any) => {
+								console.log(index);
+								setIdx(index);
 							}}
 							afterChange={(index: any) => {
 								setIdx(index);

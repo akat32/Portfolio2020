@@ -46,22 +46,6 @@ export const ProjectInfo = (props) => {
 						<p className="infoTitle">{props.language.projectContents}</p>
 						<div className="infoDes">{info.contents}</div>
 					</div>
-					<div className="innerInfo">
-						<p className="infoTitle">{props.language.projectContents}</p>
-						<div className="infoDes">{info.contents}</div>
-					</div>
-					<div className="innerInfo">
-						<p className="infoTitle">{props.language.projectContents}</p>
-						<div className="infoDes">{info.contents}</div>
-					</div>
-					<div className="innerInfo">
-						<p className="infoTitle">{props.language.projectContents}</p>
-						<div className="infoDes">{info.contents}</div>
-					</div>
-					<div className="innerInfo">
-						<p className="infoTitle">{props.language.projectContents}</p>
-						<div className="infoDes">{info.contents}</div>
-					</div>
 				</div>
 			</div>
 		</div>
