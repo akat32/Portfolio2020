@@ -4,7 +4,7 @@ import './styles.scss';
 import { ResumeData } from '../../../context/ResumeData';
 import { ResumeDataEN } from '../../../context/ResumeDataEN';
 export const MobileHome = (props: any) => {
-	const [data, setData] = useState(props.lang === 'EN' ? ResumeDataEN : ResumeData);
+	const [data] = useState(props.lang === 'EN' ? ResumeDataEN : ResumeData);
 	return (
 		<div id="mobileHome">
 			<div className="backBlur" />

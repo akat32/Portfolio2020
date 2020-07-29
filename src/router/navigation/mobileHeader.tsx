@@ -57,6 +57,7 @@ const Menu = (props) => {
 					<a
 						href="https://github.com/akat32"
 						target="_blank"
+						rel="noopener noreferrer"
 						onClick={() => {
 							props.setIsOpen();
 						}}
@@ -68,6 +69,7 @@ const Menu = (props) => {
 					<a
 						href="https://blog.naver.com/akat32"
 						target="_blank"
+						rel="noopener noreferrer"
 						onClick={() => {
 							props.setIsOpen();
 						}}

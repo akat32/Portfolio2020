@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { ProjectData } from '../../../../context/ProjectData';
 import { ProjectDataEN } from '../../../../context/ProjectDataEN';
 import { useDeviceState, useDeviceDispatch } from '../../../../context/DeviceContext';
@@ -100,6 +100,7 @@ const Item = (props: any) => {
 	let deviceDispatch: any = useDeviceDispatch();
 	return (
 		<img
+			alt="Item"
 			className={`mobileItem mobileProjectIcon`}
 			src={ProjectData[props.num].icon}
 			style={{ boxShadow: props.num === number ? '0px -1px 8px 1px rgba(31,31,31,1)' : '' }}

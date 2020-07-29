@@ -3,12 +3,11 @@ import './styles.scss';
 
 import { ProjectData } from '../../../../context/ProjectData';
 import { ProjectDataEN } from '../../../../context/ProjectDataEN';
-import { useDeviceDispatch } from '../../../../context/DeviceContext';
-import { useProjectState, useProjectDispatch } from '../../../../context/ProjectContext';
+import { useProjectState } from '../../../../context/ProjectContext';
 
-import web from '../../../assets/www.svg';
-import git from '../../../assets/github.svg';
-import playstore from '../../../assets/playstore.svg';
+// import web from '../../../assets/www.svg';
+// import git from '../../../assets/github.svg';
+// import playstore from '../../../assets/playstore.svg';
 
 export const ProjectInfo = (props) => {
 	let number = useProjectState().number;
