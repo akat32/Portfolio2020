@@ -8,18 +8,9 @@ export const Resume = (props) => {
 			<div className="innerPdf">
 				{/* <h1>2020. 6. 20. 예정</h1> */}
 				{props.lang === 'EN' ? (
-					<h1>작성중</h1>
+					<iframe src="https://docs.google.com/viewer?srcid=1UhCa1bI93_Q8epybEzoBU1ikKJw-lbL2&pid=explorer&efh=false&a=v&chrome=false&embedded=true" />
 				) : (
-					// <iframe
-					//   title="resume"
-					//   src="https://drive.google.com/uc?export=view&id=1mYphs4FeDk-QCooh5qqIDtFpHxhl2Jpa"
-					// ></iframe>
-					// <iframe
-					//   title="resume"
-					//   //https://drive.google.com/file/d/1mYphs4FeDk-QCooh5qqIDtFpHxhl2Jpa/view?usp=sharing
-					//   src="https://drive.google.com/uc?export=view&id=1rYZkAseAxW85FTDbyGaSdPuCqLVWzIFl"
-					// ></iframe>
-					<h1>작성중</h1>
+					<iframe src="https://docs.google.com/viewer?srcid=1UhCa1bI93_Q8epybEzoBU1ikKJw-lbL2&pid=explorer&efh=false&a=v&chrome=false&embedded=true" />
 				)}
 			</div>
 		</div>

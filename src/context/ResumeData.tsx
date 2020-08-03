@@ -1,4 +1,4 @@
-import earlysloth from '../assets/Company/earlyslothLogo.png';
+import earlysloth from '../assets/Company/earlysloth.png';
 import underpin from '../assets/Company/underpin.png';
 import sunrin from '../assets/School/sunrin.png';
 export const ResumeData = {
@@ -42,8 +42,7 @@ export const ResumeData = {
 			title: 'Smarteen App Challenge 2018 장려상',
 			host: '서울디지털재단', //주최
 			date: '2018.11', // 수상 일
-			description:
-				'Vue.js를 사용한 모바일 웹 개발, Node.js를 사용한 서버 개발을 맡아, 만다라트 방식의 캘린더. 목공소를 출시해 수상을 했습니다.',
+			description: 'Vue.js를 사용한 모바일 웹 개발, Node.js를 사용한 서버 개발을 맡아, 만다라트 방식의 캘린더. 목공소를 출시해 수상을 했습니다.',
 		},
 		{
 			title: '2018 불법스포츠도박 근절 해커톤 장려상',

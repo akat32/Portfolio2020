@@ -11,10 +11,13 @@ import { useProjectState } from '../../../../context/ProjectContext';
 
 export const ProjectInfo = (props) => {
 	let number = useProjectState().number;
-	const [info, setInfo] = useState(props.lang === 'EN' ? ProjectDataEN[number] : ProjectData[number]);
-	useMemo(() => {
-		setInfo(props.lang === 'EN' ? ProjectDataEN[number] : ProjectData[number]);
-	}, [number, props.lang]);
+	const [ info, setInfo ] = useState(props.lang === 'EN' ? ProjectDataEN[number] : ProjectData[number]);
+	useMemo(
+		() => {
+			setInfo(props.lang === 'EN' ? ProjectDataEN[number] : ProjectData[number]);
+		},
+		[ number, props.lang ],
+	);
 	return (
 		<div className="MobileProjectInfo">
 			<div className="info">

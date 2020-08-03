@@ -1,6 +1,12 @@
 .ResumeMobile {
-	.innerPdf {
+	overflow-y: hidden;
+	.mobileInnerPdf {
 		padding-top: 60px !important;
 		height: calc(100vh - 60px) !important;
+		width: 100% !important;
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
